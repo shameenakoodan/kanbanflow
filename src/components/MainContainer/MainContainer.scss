@@ -1,0 +1,15 @@
+.main{
+/* Use display: flex; to enable Flexbox layout for the container */
+display: flex;
+
+/* Use flex-direction: row; to set the main axis horizontally, arranging items in a row */
+flex-direction: row;
+}
+.sidebar{
+    flex: 20%; /* 20% of the container's width */
+    padding: 20px; /* Optional: Add padding for the navigation bar */
+}
+.content{
+    flex: 80%; /* 80% of the container's width */
+    padding: 20px; /* Optional: Add padding for the main content */
+}

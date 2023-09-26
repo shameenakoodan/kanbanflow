@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.scss';
+import MainContainer from './components/MainContainer/MainContainer';
 
 function App() {
   return (
     <div className="App">
-      Hello there
+      <MainContainer />
     </div>
   );
 }
