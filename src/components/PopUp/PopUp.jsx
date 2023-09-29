@@ -1,12 +1,17 @@
 import React from 'react'
 import "./PopUp.scss";
 const PopUp = ({ isPopupOpen,closePopup}) => {
-    const newdata = {
+   /* const newdata = {
         "boardname": "Name Please",
         "description": "From Front end"
-    }
-    const createNew = () => {
-        
+    }*/
+    const createNew = (event) => {
+        const boardname = event.target.boardname.value;
+        const board_description = event.target.description.value;
+        const newdata = {
+            "boardname" :boardname,
+            "description":board_description
+        };
         fetch("http://localhost:8082/create-board", {
             method: 'POST',
             headers: { "Content-type": "application/json" },
@@ -25,9 +30,9 @@ const PopUp = ({ isPopupOpen,closePopup}) => {
                             </span>
                             <form onSubmit={createNew}>
                                 Enter Board name
-                                <input type='text' />
+                                <input type='text' id="boardname"/>
                                 Enter description
-                                <input type='text'/>
+                                <input type='text'id="description"/>
                                 <input type="submit" />
                             </form>
                         </div>
